@@ -8,7 +8,7 @@
 
 參數說明
 
-- **Target Angle :** 指定 UE 移動的目標角度，可在上方的輸入欄輸入角度，並按下右邊的 Input Angle 按鈕，以改變 Target Angle 的數值
+- **Target Angle :** 指定 UE 移動到相對於 RIS 的目標角度，可在上方輸入欄中輸入數值，並按下右邊的 Input Angle 按鈕，以改變 Target Angle 的數值
 
 - **Current Angle :**  模擬 UE 當前相對於 RIS 的角度，此數值會逐漸向 Target Angle 移動
 
@@ -23,3 +23,9 @@
 - **Cur RSRP Prediction :** 當前 Kalman Filter 預測 RSRP 的數值
 
 - **Pre RSRP Prediction :** 前一筆 Cur RSRP Prediction 的數值
+
+
+
+# 執行說明
+
+為了維持UE的訊號品質，所以目標會是希望讓 RIS 的反射角度能夠追蹤 UE 移動，對應的程式中的參數就是希望 Current Case 的數值要能在 Current Angle 的附近，以使基站接收到 UE 回傳的訊號報告中的 RSRP 能夠維持相對較高的數值。

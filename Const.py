@@ -23,7 +23,7 @@ INTERVAL_TIME=0.25
 # HANDOVER_THRESHOLD=-110             # -105~-125
 # HANDOVER_THRESHOLD=-115             # -105~-125
 
-HANDOVER_THRESHOLD=-112             # -105~-125
+HANDOVER_THRESHOLD=-109             # -105~-125
 THRESHOLD_OFFEST = -6
 
 # Data Info
@@ -82,7 +82,7 @@ RECOVERY_ACTIVATE = False     # True    False
 
 # =====================================================
 # 當 RSRP 訊號變差，再多收集 n 筆資料
-CHECK_RSRP_AVG_NUM = 5
+CHECK_RSRP_AVG_NUM = 3
 
 
 

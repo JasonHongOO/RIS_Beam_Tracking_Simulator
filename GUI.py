@@ -98,7 +98,7 @@ class App(customtkinter.CTk):
         self.RSRPFrame.grid_columnconfigure(0, weight=1)
         self.RSRPFrame.grid_rowconfigure(0, weight=1)
 
-        self.RSRPLabel = customtkinter.CTkLabel(self.RSRPFrame, text="Cur RSRP (case 0) : None", font=customtkinter.CTkFont(size=25, weight="bold"))
+        self.RSRPLabel = customtkinter.CTkLabel(self.RSRPFrame, text="Current RSRP (case 0) : None", font=customtkinter.CTkFont(size=25, weight="bold"))
         self.RSRPLabel.grid(row=0, column=0, padx=(0,0), pady=10, sticky="nsew")
 
         # ===============  Right Frame  ===============
@@ -108,7 +108,7 @@ class App(customtkinter.CTk):
         self.RightFrame.grid_rowconfigure((1,2,4,5), weight=1)
 
         # Predict Angle Label
-        self.PredictRSRPLabel = customtkinter.CTkLabel(self.RightFrame, text="Predict Angle : ", font=customtkinter.CTkFont(size=10, weight="bold"))
+        self.PredictRSRPLabel = customtkinter.CTkLabel(self.RightFrame, text="Angle Prediction : ", font=customtkinter.CTkFont(size=10, weight="bold"))
         self.PredictRSRPLabel.grid(row=0, column=0, padx=(0,0), pady=(2,0), sticky="ew")
 
         # Predict Angle (Cur)
@@ -117,7 +117,7 @@ class App(customtkinter.CTk):
         self.PredictCurAngleFrame.grid_columnconfigure(0, weight=1)
         self.PredictCurAngleFrame.grid_rowconfigure(0, weight=1)
 
-        self.PredictCurAngleLabel = customtkinter.CTkLabel(self.PredictCurAngleFrame, text="Predict Cur Angle : None", font=customtkinter.CTkFont(size=25, weight="bold"))
+        self.PredictCurAngleLabel = customtkinter.CTkLabel(self.PredictCurAngleFrame, text="Cur Angle Prediction : None", font=customtkinter.CTkFont(size=25, weight="bold"))
         self.PredictCurAngleLabel.grid(row=0, column=0, padx=(0,0), pady=10, sticky="nsew")
 
         # Predict Angle (Recent)
@@ -126,11 +126,11 @@ class App(customtkinter.CTk):
         self.PredictPreAngleFrame.grid_columnconfigure(0, weight=1)
         self.PredictPreAngleFrame.grid_rowconfigure(0, weight=1)
 
-        self.PredictPreAngleLabel = customtkinter.CTkLabel(self.PredictPreAngleFrame, text="Predict Pre Angle : None", font=customtkinter.CTkFont(size=25, weight="bold"))
+        self.PredictPreAngleLabel = customtkinter.CTkLabel(self.PredictPreAngleFrame, text="Pre Angle Prediction : None", font=customtkinter.CTkFont(size=25, weight="bold"))
         self.PredictPreAngleLabel.grid(row=0, column=0, padx=(0,0), pady=10, sticky="nsew")
 
         # Predict RSRP Label
-        self.PredictRSRPLabel = customtkinter.CTkLabel(self.RightFrame, text="Predict RSRP : ", font=customtkinter.CTkFont(size=10, weight="bold"))
+        self.PredictRSRPLabel = customtkinter.CTkLabel(self.RightFrame, text="RSRP Prediction : ", font=customtkinter.CTkFont(size=10, weight="bold"))
         self.PredictRSRPLabel.grid(row=3, column=0, padx=(0,0), pady=(2,0), sticky="ew")
 
         # Predict RSRP (Cur)
@@ -139,7 +139,7 @@ class App(customtkinter.CTk):
         self.PredictCurRSRPFrame.grid_columnconfigure(0, weight=1)
         self.PredictCurRSRPFrame.grid_rowconfigure(0, weight=1)
 
-        self.PredictCurRSRPLabel = customtkinter.CTkLabel(self.PredictCurRSRPFrame, text="Predict Cur RSRP : None", font=customtkinter.CTkFont(size=25, weight="bold"))
+        self.PredictCurRSRPLabel = customtkinter.CTkLabel(self.PredictCurRSRPFrame, text="Cur RSRP Prediction : None", font=customtkinter.CTkFont(size=25, weight="bold"))
         self.PredictCurRSRPLabel.grid(row=0, column=0, padx=(0,0), pady=10, sticky="nsew")
 
         # Predict RSRP (Recent)
@@ -148,7 +148,7 @@ class App(customtkinter.CTk):
         self.PredictPreRSRPFrame.grid_columnconfigure(0, weight=1)
         self.PredictPreRSRPFrame.grid_rowconfigure(0, weight=1)
 
-        self.PredictPreRSRPLabel = customtkinter.CTkLabel(self.PredictPreRSRPFrame, text="Predict Pre RSRP : None", font=customtkinter.CTkFont(size=25, weight="bold"))
+        self.PredictPreRSRPLabel = customtkinter.CTkLabel(self.PredictPreRSRPFrame, text="Pre RSRP Prediction : None", font=customtkinter.CTkFont(size=25, weight="bold"))
         self.PredictPreRSRPLabel.grid(row=0, column=0, padx=(0,0), pady=10, sticky="nsew")
 
 
@@ -297,11 +297,11 @@ class App(customtkinter.CTk):
     def Updata(self):       # timer ?
         def Basic_GUI_Setting():
             self.CurAngleLabel.configure(text=f"Current Angle : {self.ParentComponent.Cur_Angle_Value}")
-            self.PredictCurAngleLabel.configure(text=f"Predict Cur Angle : {self.ParentComponent.AngleKalman.PredictResult}")
-            self.PredictPreAngleLabel.configure(text=f"Predict Pre Angle : {self.ParentComponent.AngleKalman.PrePredictResult}")
-            self.RSRPLabel.configure(text=f"Cur RSRP : {self.ParentComponent.Cur_RSRP_Value}")
-            self.PredictCurRSRPLabel.configure(text=f"Predict Cur RSRP : {self.ParentComponent.RSRPKalman.PredictResult:<10}")
-            self.PredictPreRSRPLabel.configure(text=f"Predict Pre RSRP : {self.ParentComponent.RSRPKalman.PrePredictResult:<10}")
+            self.PredictCurAngleLabel.configure(text=f"Cur Angle Prediction : {self.ParentComponent.AngleKalman.PredictResult}")
+            self.PredictPreAngleLabel.configure(text=f"Pre Angle Prediction : {self.ParentComponent.AngleKalman.PrePredictResult}")
+            self.RSRPLabel.configure(text=f"Current RSRP : {self.ParentComponent.Cur_RSRP_Value}")
+            self.PredictCurRSRPLabel.configure(text=f"Cur RSRP Prediction : {self.ParentComponent.RSRPKalman.PredictResult:<10}")
+            self.PredictPreRSRPLabel.configure(text=f"Pre RSRP Prediction : {self.ParentComponent.RSRPKalman.PrePredictResult:<10}")
             self.CurCaseLabel.configure(text=f"Current Case : {self.ParentComponent.Cur_Case_Value}")
 
         def Angle_TextBox():    
@@ -339,16 +339,16 @@ class App(customtkinter.CTk):
             # Predict TextBox(Angle)
             self.PredictAngleLogFrame.insert('end', f"{self.ParentComponent.current_time}\n")
             self.PredictAngleLogFrame.insert('end', f"Cur Angle : {self.ParentComponent.Cur_Angle_Value}\n")
-            self.PredictAngleLogFrame.insert('end', f"Predict Cur Angle : {self.ParentComponent.AngleKalman.PredictResult}\n")
-            self.PredictAngleLogFrame.insert('end', f"Predict Pre Angle : {self.ParentComponent.AngleKalman.PrePredictResult}\n")
+            self.PredictAngleLogFrame.insert('end', f"Cur Angle Prediction : {self.ParentComponent.AngleKalman.PredictResult}\n")
+            self.PredictAngleLogFrame.insert('end', f"Pre Angle Prediction : {self.ParentComponent.AngleKalman.PrePredictResult}\n")
             self.PredictAngleLogFrame.insert('end', f"=====================================\n")
             # self.PredictAngleLogFrame.see('end')      # 頁面滑到底 (滑鼠滾輪滑到底)
 
             # Predict TextBox(RSRP)
             self.PredictRSRPLogFrame.insert('end', f"{self.ParentComponent.current_time}\n")
-            self.PredictRSRPLogFrame.insert('end', f"Cur RSRP : {self.ParentComponent.Cur_RSRP_Value}\n")
-            self.PredictRSRPLogFrame.insert('end', f"Predict Cur RSRP : {self.ParentComponent.RSRPKalman.PredictResult}\n")
-            self.PredictRSRPLogFrame.insert('end', f"Predict Pre RSRP : {self.ParentComponent.RSRPKalman.PrePredictResult}\n")
+            self.PredictRSRPLogFrame.insert('end', f"Current RSRP : {self.ParentComponent.Cur_RSRP_Value}\n")
+            self.PredictRSRPLogFrame.insert('end', f"Cur RSRP Prediction : {self.ParentComponent.RSRPKalman.PredictResult}\n")
+            self.PredictRSRPLogFrame.insert('end', f"Pre RSRP Prediction: {self.ParentComponent.RSRPKalman.PrePredictResult}\n")
             self.PredictRSRPLogFrame.insert('end', f"=====================================\n")
             # self.PredictRSRPLogFrame.see('end')      # 頁面滑到底 (滑鼠滾輪滑到底)
         

@@ -4,14 +4,29 @@
 # DATA_BEHIND_FILE = "./Data/CurveData.json"
 
 # CASE 2
-DATA_FILE = "./Data/CurveData_F1.json"                     # "./Data/CurveData_F10.json"
-DATA_BEHIND_FILE = "./Data/CurveData_F1.json"
+# DATA_FILE = "./Data/CurveData_F1.json"                     # "./Data/CurveData_F10.json"
+# DATA_BEHIND_FILE = "./Data/CurveData_F1.json"
 
 # CASE 3
 # DATA_FILE = "./Data/CurveData_F10.json"                     # "./Data/CurveData_F10.json"
 # DATA_BEHIND_FILE = "./Data/CurveData_F1.json"
 
 # TEST
+# DATA_FILE = "./Data/CurveData_other.json"                     # "./Data/CurveData_F10.json"
+# DATA_BEHIND_FILE = "./Data/CurveData_other.json"
+
+# DATA_FILE = "./Data/CurveData_other_1.json"                     # "./Data/CurveData_F10.json"
+# DATA_BEHIND_FILE = "./Data/CurveData_other_1.json"
+
+# DATA_FILE = "./Data/CurveData_other_2.json"                     # "./Data/CurveData_F10.json"
+# DATA_BEHIND_FILE = "./Data/CurveData_other_2.json"
+
+# DATA_FILE = "./Data/CurveData_other_3.json"                     # "./Data/CurveData_F10.json"
+# DATA_BEHIND_FILE = "./Data/CurveData_other_3.json"
+
+DATA_FILE = "./Data/CurveData_other_4.json"                     # "./Data/CurveData_F10.json"
+DATA_BEHIND_FILE = "./Data/CurveData_other_4.json"
+
 # DATA_FILE = "./Data/Data.json"                     # "./Data/CurveData_F10.json"
 # DATA_BEHIND_FILE = "./Data/Data.json"
 
@@ -23,8 +38,7 @@ INTERVAL_TIME=0.25
 # HANDOVER_THRESHOLD=-110             # -105~-125
 # HANDOVER_THRESHOLD=-115             # -105~-125
 
-HANDOVER_THRESHOLD=-109             # -105~-125
-THRESHOLD_OFFEST = -6
+HANDOVER_THRESHOLD=-108             # -105~-125
 
 # Data Info
 ANGLE_MIN=-60
@@ -33,13 +47,13 @@ ANGLE_MAX=60
 # RSRP Data Range (every time handover)
 DATA_TYPE = "FLOAT"
 
-ORI_SIMPLED_DATA_RANGE_MIN=-8
-ORI_SIMPLED_DATA_RANGE_MAX=8
-ORI_SIMPLED_DATA_RANGE_STEP=1
+ORI_SIMPLED_DATA_RANGE_MIN=-6
+ORI_SIMPLED_DATA_RANGE_MAX=6
+ORI_SIMPLED_DATA_RANGE_STEP=0.5
 
 CASE_CHANGE_SIMPLED_DATA_RANGE_MIN=-4                           # 當  CASE 數量少時，給的範圍就要大，需要涵蓋較大範圍，才能彌補 CASE 之間的空缺
 CASE_CHANGE_SIMPLED_DATA_RANGE_MAX=4
-CASE_CHANGE_SIMPLED_DATA_RANGE_STEP=1
+CASE_CHANGE_SIMPLED_DATA_RANGE_STEP=0.5
 
 # misassessment
 MISASSESSMENT_RANGE_MIN = -0
@@ -83,6 +97,5 @@ RECOVERY_ACTIVATE = False     # True    False
 # =====================================================
 # 當 RSRP 訊號變差，再多收集 n 筆資料
 CHECK_RSRP_AVG_NUM = 3
-
 
 

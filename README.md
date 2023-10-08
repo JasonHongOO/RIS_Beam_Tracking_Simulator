@@ -24,7 +24,8 @@
 
 - **Pre RSRP Prediction :** 前一筆 Cur RSRP Prediction 的數值
 
-
+# Demo 影片連結
+https://www.youtube.com/playlist?list=PLKLsr1lwWuIctO9KARZbQ3pKz_-2K-4ha
 
 # 執行說明
 

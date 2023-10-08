@@ -95,10 +95,10 @@ class HandOverSimulator:
                     elif self.Cur_Angle_Value < Const.ANGLE_MIN: self.Cur_Angle_Value = Const.ANGLE_MIN
                     
                 
-            updata_interval = [1, 0.75, 0.5, 0.25]
-            time.sleep(random.choice(updata_interval)) 
+            # updata_interval = [1, 0.75, 0.5, 0.25]
+            # time.sleep(random.choice(updata_interval)) 
 
-            # time.sleep(random.uniform(1, 0.1)) 
+            time.sleep(random.uniform(0.75, 0.25)) 
             
             # time.sleep(0.1)       # UE 移動速度暫定不變
 
@@ -149,8 +149,8 @@ class HandOverSimulator:
                         print(f"Update : {self.AngleKalman.PredictResult}")
                         Angle_Predictor(None)
                         print(f"First : {self.AngleKalman.PredictResult}")
-                        Angle_Predictor(None)
-                        print(f"Second : {self.AngleKalman.PredictResult}")
+                        # Angle_Predictor(None)
+                        # print(f"Second : {self.AngleKalman.PredictResult}")
 
                         if(self.QueueCnt <= Const.TERMINATE_SET):
                             print(f"小於限制次數 : {self.QueueCnt}")
